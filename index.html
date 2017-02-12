@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/3.6.7/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="book-objects.js"></script>
+    <script src="main.js"></script>
+
+
+    </script>
+    <link rel="stylesheet" href="main.css">
+    <title>CCAT Library</title>
+  </head>
+  <body ng-app="myModule">
+    <div class="container">
+      <div class="header">
+        <h1>CCAT Library Catalog</h1>
+        <p>This tool is available to help student find textbooks, journals, and fun reads</p>
+        <input type="text" placeholder="Title, Author, Keywords, etc.." ng-model="searchText" id="searchbar" />
+      </div>
+      <div ng-controller="myController">
+      <table>
+        <thead>
+          <tr>
+            <th class="image">Cover</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Section</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="book in books | filter:searchText" >
+            <td><img src="{{book.image}}" width="75px" class="thumbs"></td>
+            <td class="wide">{{book.title}}</td>
+            <td class="wide">{{book.auth}}</td>
+            <td class="wide">{{book.section}}</td>
+            <td class="tags">{{book.tags}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    </div>
+
+  </body>
+</html>
