@@ -51,8 +51,6 @@ table{
   text-align: left;
   padding: 13px;
   min-width: 95%;
-  /*width: 85%;
-  float:right;*/
   padding-top: 150px;
 }
 .wide
@@ -64,17 +62,13 @@ table{
 td,th{
   padding: 10px;
   height: 15px;
-  /*border-style: solid;
-  border-width: thin;*/
+
 }
 .thumbs
 {
   padding: .5px;
 }
-tr:hover
-{
-  /*background-color: #5c8021;*/
-}
+
 input{
   margin-bottom: 30px;
   width: 100%;

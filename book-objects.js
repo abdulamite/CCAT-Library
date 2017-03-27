@@ -1,3 +1,4 @@
+// Contains a list of all of the books in the CCAT library
 var bound = [
  {
    "title": "Water for Every Farm ",
